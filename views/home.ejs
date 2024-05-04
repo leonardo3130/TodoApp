@@ -1,0 +1,32 @@
+<%- include('partials/header'); -%>
+
+<!-- Display username in greeting -->
+<div class="container">
+<h1>Home</h1>
+<p>Hi, <%= username %>!</p>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <% notes.forEach(note => { %>
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><%= note.heading %></h5>
+                    <% if (note.content) { %> 
+                      <p><%= note.content.substring(0, 100) + '...' %></p>
+                    <% } else { %>
+                      <p>No content available.</p>
+                    <% } %>
+                  </div>
+                  
+                <div class="card-footer">
+                    <small>Written by <%= username %> on <%= note.creation.toDateString() %></small>
+                </div>
+                <!-- Modify the link URL -->
+                <button type="button" class="btn btn-outline-info"><a href="/<%= encodeURIComponent(note.heading) %>">Read more</a></button>
+            </div>
+        </div>
+    <% }); %>
+</div>
+</div>
+
+<%- include('partials/footer'); -%>

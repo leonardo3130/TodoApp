@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+
+<div class="containter">
+<h1 class="fs-1 fw-bold">Register</h1>
+<form action="/register", method="POST">
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="input-group mb-3">
+      <span class="input-group-text">
+        <i class="bi bi-person-circle"></i>
+      </span>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="username" name="username" required>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">
+        <i class="bi bi-incognito"></i>
+      </span>
+      <input type="password" class="form-control" placeholder="Password" aria-label="Password" id="password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-warning">Register</button>
+  </div>
+</form>
+
+</div>
+
+<%- include('partials/footer') -%>

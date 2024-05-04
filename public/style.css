@@ -1,0 +1,19 @@
+.container,
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: #443D7C;
+    background: linear-gradient(315deg, #443D7C, #22C551);
+    height: 100vh; 
+    margin: 0;
+}
+
+.min-h-card {
+    min-height: 50vh;
+} 
+
